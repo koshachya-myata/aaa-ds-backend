@@ -47,6 +47,11 @@ class PlateReader(nn.Module):
         return x
 
     def read_text(self, image: bytes) -> str:
+        """
+        raises InvalidImage
+        :param image:
+        :return:
+        """
         transform = T.Compose([
             T.PILToTensor()
         ])
